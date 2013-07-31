@@ -40,5 +40,11 @@ public class Faculty {
 		}
 		return placeCount;
 	}
+	public int getNumberSpecialty() {
+		return numberSpecialty;
+	}
+	public void setNumberSpecialty(int numberSpecialty) {
+		this.numberSpecialty = numberSpecialty;
+	}
 	
 }

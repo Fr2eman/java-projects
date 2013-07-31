@@ -30,6 +30,7 @@ public class UniversityFactoty {
 			f.getSpecialities().add(
 					new Specialty("Информатика и технологии программирования",
 							50));
+			f.setNumberSpecialty(3);
 			faculies.add(f);
 
 			f = new Faculty("Факультет информационных технологий и управления");
@@ -45,6 +46,7 @@ public class UniversityFactoty {
 							75));
 			f.getSpecialities().add(
 					new Specialty("Промышленная электроника", 30));
+			f.setNumberSpecialty(4);
 			faculies.add(f);
 
 			f = new Faculty("Инженерно-экономический факультет");
@@ -59,6 +61,7 @@ public class UniversityFactoty {
 			f.getSpecialities().add(new Specialty("Электронный маркетинг", 15));
 			f.getSpecialities().add(
 					new Specialty("Экономика электронного бизнеса", 15));
+			f.setNumberSpecialty(4);
 			faculies.add(f);
 
 			f = new Faculty("Факультет компьютерного проектирования");
@@ -89,6 +92,7 @@ public class UniversityFactoty {
 					.add(new Specialty(
 							"Информационные системы и технологии (в обеспечении промышленной безопасности)",
 							15));
+			f.setNumberSpecialty(9);
 			faculies.add(f);
 
 			f = new Faculty("Факультет радиотехники и электроники");
@@ -116,6 +120,7 @@ public class UniversityFactoty {
 					.add(new Specialty(
 							"Электронные и информационно-управляющие системы физических установок",
 							30));
+			f.setNumberSpecialty(9);
 			faculies.add(f);
 
 			f = new Faculty("Факультет телекоммуникаций");
@@ -145,6 +150,7 @@ public class UniversityFactoty {
 							20));
 			f.getSpecialities().add(
 					new Specialty("Защита информации в телекоммуникациях", 20));
+			f.setNumberSpecialty(7);
 			faculies.add(f);
 
 			univer.setListFaculty(faculies);

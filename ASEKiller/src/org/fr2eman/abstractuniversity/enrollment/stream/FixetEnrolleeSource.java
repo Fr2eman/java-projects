@@ -14,7 +14,8 @@ public class FixetEnrolleeSource implements EnrolleeSource {
 			i++;
 			int scor = random.nextInt(400);
 			boolean inQ = random.nextBoolean();
-			Enrollee enroll = new Enrollee(scor, inQ);
+			RandomFacultyAndSpecialty randomStatement = new RandomFacultyAndSpecialty();
+			Enrollee enroll = new Enrollee(scor, randomStatement.setStatement(), inQ);
 			// TODO создание заявления
 			
 			return enroll;
