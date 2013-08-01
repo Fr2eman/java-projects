@@ -11,7 +11,6 @@ public class Faculty {
 
 	private String name;
 	private Set<Specialty> specialities;
-	private int numberSpecialty;
 	
 	public Faculty(String name) {
 		this(name, new HashSet<Specialty>());
@@ -40,11 +39,4 @@ public class Faculty {
 		}
 		return placeCount;
 	}
-	public int getNumberSpecialty() {
-		return numberSpecialty;
-	}
-	public void setNumberSpecialty(int numberSpecialty) {
-		this.numberSpecialty = numberSpecialty;
-	}
-	
 }

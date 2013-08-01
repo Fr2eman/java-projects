@@ -3,7 +3,6 @@ package org.fr2eman.abstractuniversity.enrollment.stream;
 import java.util.Random;
 
 import org.fr2eman.abstractuniversity.enrollment.domain.Enrollee;
-import org.fr2eman.abstractuniversity.enrollment.domain.Statement;
 
 public class FixetEnrolleeSource implements EnrolleeSource {
 	private Random random;

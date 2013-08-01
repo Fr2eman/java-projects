@@ -43,5 +43,11 @@ public class Enrollee {
 		this.state = state;
 		this.jumpedQueue = jumpedQueue;
 	}
+	public Statement getState() {
+		return state;
+	}
+	public void setState(Statement state) {
+		this.state = state;
+	}
 	
 }

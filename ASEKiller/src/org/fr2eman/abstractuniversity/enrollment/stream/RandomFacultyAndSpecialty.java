@@ -16,13 +16,24 @@ public class RandomFacultyAndSpecialty {
 	Random random = new Random();
 	UniversityFactoty univerFacktory = new UniversityFactoty();
 	University univer = null;
+	Statement stat = null;
+	int fac = 0;
+	int spec = 0;
+	List<Faculty> listFacultys = null;
+	List<Specialty> listSpecialtys = null;
+	List<Specialty> randomSpecialtys = new ArrayList<Specialty>();
 	public Statement setStatement() {
-		univer = univerFacktory.getUniversity(Universities.BSUIR);
-		int fac = random.nextInt((univer.getListFaculty().size()) - 1);
-		List<Faculty> list = new ArrayList<Faculty>(univer.getListFaculty());
-		int spec = random.nextInt((list.get(fac).getNumberSpecialty()) - 1);
-		
-		return null;
+		int numbSpecialtys = random.nextInt(6);
+		numbSpecialtys++;
+		for (int i = 1; i <= numbSpecialtys; i++) {
+			univer = univerFacktory.getUniversity(Universities.BSUIR);
+			fac = random.nextInt((univer.getListFaculty().size()) - 1);
+			List<Faculty> listFacultys = new ArrayList<Faculty>(univer.getListFaculty());
+			spec = random.nextInt((listFacultys.get(fac).getSpecialities().size()) - 1);
+			listSpecialtys = new ArrayList<Specialty>(listFacultys.get(fac).getSpecialities());
+			randomSpecialtys.add(listSpecialtys.get(spec));
+		}
+		return new Statement(randomSpecialtys);
 	}
 	
 }
