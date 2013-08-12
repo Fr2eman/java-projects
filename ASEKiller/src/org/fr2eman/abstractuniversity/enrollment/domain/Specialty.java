@@ -1,6 +1,8 @@
 package org.fr2eman.abstractuniversity.enrollment.domain;
 
 public class Specialty {
+	
+	private Faculty faculty;
 	private String code;
 	private String name;
 	private String description;
@@ -44,6 +46,14 @@ public class Specialty {
 	}
 	public void setPlaceCount(int placeCount) {
 		this.placeCount = placeCount;
+	}
+
+	public Faculty getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(Faculty faculty) {
+		this.faculty = faculty;
 	}
 	
 }

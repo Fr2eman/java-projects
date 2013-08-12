@@ -22,7 +22,7 @@ public class RandomFacultyAndSpecialty {
 	List<Faculty> listFacultys = null;
 	List<Specialty> listSpecialtys = null;
 	List<Specialty> randomSpecialtys = new ArrayList<Specialty>();
-	public Statement setStatement() {
+	public Statement buildStatement() {
 		int numbSpecialtys = random.nextInt(6);
 		numbSpecialtys++;
 		for (int i = 1; i <= numbSpecialtys; i++) {
