@@ -1,14 +1,14 @@
 package org.fr2eman.abstractuniversity.enrollment.domain;
 
-import java.util.Set;
+import java.util.List;
 
 public class University {
 	// имя, описание, список факультетов
 	private String name;
 	private String descrition;
-	private Set<Faculty> listFaculty;
+	private List<Faculty> listFaculty;
 	
-	public University(String name, Set<Faculty> listFaculty) {
+	public University(String name, List<Faculty> listFaculty) {
 		super();
 		this.name = name;
 		this.listFaculty = listFaculty;
@@ -25,10 +25,10 @@ public class University {
 	public void setDescrition(String descrition) {
 		this.descrition = descrition;
 	}
-	public Set<Faculty> getListFaculty() {
+	public List<Faculty> getListFaculty() {
 		return listFaculty;
 	}
-	public void setListFaculty(Set<Faculty> listFaculty) {
+	public void setListFaculty(List<Faculty> listFaculty) {
 		this.listFaculty = listFaculty;
 	}
 	public University(String name) {

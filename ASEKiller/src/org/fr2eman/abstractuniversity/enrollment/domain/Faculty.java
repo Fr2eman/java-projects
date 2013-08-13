@@ -1,7 +1,7 @@
 package org.fr2eman.abstractuniversity.enrollment.domain;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -10,12 +10,12 @@ import java.util.Set;
 public class Faculty {
 
 	private String name;
-	private Set<Specialty> specialities;
+	private List<Specialty> specialities;
 	
 	public Faculty(String name) {
-		this(name, new HashSet<Specialty>());
+		this(name, new ArrayList<Specialty>());
 	}
-	public Faculty(String name, Set<Specialty> specialities) {
+	public Faculty(String name, List<Specialty> specialities) {
 		super();
 		this.name = name;
 		this.specialities = specialities;
@@ -26,10 +26,10 @@ public class Faculty {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Set<Specialty> getSpecialities() {
+	public List<Specialty> getSpecialities() {
 		return specialities;
 	}
-	public void setSpecialities(Set<Specialty> specialities) {
+	public void setSpecialities(List<Specialty> specialities) {
 		this.specialities = specialities;
 	}
 	public int getPlaceCount() {
@@ -39,4 +39,11 @@ public class Faculty {
 		}
 		return placeCount;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (!(obj instanceof Faculty)) return false;
+		Faculty faculty = (Faculty)obj;
+		return name.equals(faculty.getName());
+	} 
 }

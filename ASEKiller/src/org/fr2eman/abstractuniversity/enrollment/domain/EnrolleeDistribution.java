@@ -37,9 +37,17 @@ public class EnrolleeDistribution {
 			itorator++;
 			maxScore = 0;
 		} 
-		for (int i = 0; i < listEnrollee.size(); i++) {
-			for (int j = 0; listEnrollee.get(i).getState().getSpeciality().size() > j; j++) {
-				//if(listEnrollee.get(i).getState().getSpeciality().get(j).getPlaceCount() > univer.)
+		for(int i = 0; i < listEnrollee.size(); i++) {
+			for(int j = 0; listEnrollee.get(i).getState().getSpeciality().size() > j; j++) {
+				for(int k = 0; k < univer.getListFaculty().size(); k++) {
+					if(listEnrollee.get(i).getState().getSpeciality().get(j).getFaculty().equals(univer.getListFaculty().get(k))) {
+						for(int h = 0; h < univer.getListFaculty().get(k).getSpecialities().size(); h++) {
+							if(listEnrollee.get(i).getState().getSpeciality().get(j).equals(univer.getListFaculty().get(k).getSpecialities().get(h))){
+								if(univer.getListFaculty().get(k))
+							}
+						}
+					}
+				}
 			}
 		}
 		

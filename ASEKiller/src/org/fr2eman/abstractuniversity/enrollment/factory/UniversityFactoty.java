@@ -1,7 +1,7 @@
 package org.fr2eman.abstractuniversity.enrollment.factory;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.fr2eman.abstractuniversity.enrollment.domain.Faculty;
 import org.fr2eman.abstractuniversity.enrollment.domain.Specialty;
@@ -19,7 +19,7 @@ public class UniversityFactoty {
 		if (u == Universities.BSUIR) {
 			univer = new University("БГУИР");
 			Specialty s = null;
-			Set<Faculty> faculies = new HashSet<Faculty>();
+			List<Faculty> faculies = new ArrayList<Faculty>();
 			Faculty f = new Faculty("Факультет компьютерных систем и сетей");
 			s = new Specialty("Программное обеспечение информационных технологий",
 					70);
