@@ -29,6 +29,4 @@ public class StudentList {
 		this.list = list;
 	}
 	
-	
-	
 }

@@ -55,5 +55,12 @@ public class Specialty {
 	public void setFaculty(Faculty faculty) {
 		this.faculty = faculty;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) return true;
+		if (!(obj instanceof Specialty)) return false;
+		Specialty specialty = (Specialty)obj;
+		return (name.equals(specialty.getName()));
+	} 
 	
 }
