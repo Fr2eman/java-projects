@@ -1,6 +1,5 @@
 package org.fr2eman.abstractuniversity.enrollment;
 
-import java.util.List;
 import java.util.Map;
 
 import org.fr2eman.abstractuniversity.enrollment.domain.Enrollee;
@@ -37,6 +36,7 @@ public class Main {
 				for (Enrollee e: listFromSpecialty.getList()) {
 					System.out.print("------");
 					System.out.println("Enrollee ¹" + number + " / " + e.getScore());
+					number++;
 				}
 			}
 		}

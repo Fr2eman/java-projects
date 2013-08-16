@@ -6,14 +6,19 @@ import org.fr2eman.abstractuniversity.enrollment.domain.Enrollee;
 
 public class FixetEnrolleeSource implements EnrolleeSource {
 	
-	private Random random;
+	private Random random = new Random();
 	private int eCount;
 	int i = 0;
 	public Enrollee nextEnrollee() throws NoMoreEnrolleeException {
+		int scor = 0;
+		boolean inQ = false;
 		if (i < eCount) {
 			i++;
-			int scor = random.nextInt(400);
-			boolean inQ = random.nextBoolean();
+			//try {
+				scor = random.nextInt(400);
+				inQ = random.nextBoolean();
+			//} catch (NullPointerException e){}
+			System.out.println("Enrollee " + scor);
 			
 			RandomFacultyAndSpecialty randomStatement = new RandomFacultyAndSpecialty();
 			Enrollee enroll = new Enrollee(scor, randomStatement.buildStatement(), inQ);

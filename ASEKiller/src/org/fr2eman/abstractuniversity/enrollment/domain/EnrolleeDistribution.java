@@ -32,6 +32,7 @@ public class EnrolleeDistribution {
 			}
 			listEnrollee.add(list.get(index));
 			list.remove(index);
+			index = 0;
 			itorator++;
 			maxScore = 0;
 		} 
