@@ -32,6 +32,11 @@ public class RandomFacultyAndSpecialty {
 			spec = random.nextInt((listFacultys.get(fac).getSpecialities().size()));
 			listSpecialtys = new ArrayList<Specialty>(listFacultys.get(fac).getSpecialities());
 			randomSpecialtys.add(listSpecialtys.get(spec));
+			if(i == 1) {
+				System.out.print(listSpecialtys.get(spec).getName());
+			} else {
+				System.out.print(" --> " + listSpecialtys.get(spec).getName());
+			}
 		}
 		return new Statement(randomSpecialtys);
 	}

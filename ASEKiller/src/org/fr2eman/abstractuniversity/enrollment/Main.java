@@ -27,6 +27,7 @@ public class Main {
 		// 3. получить список зачисленных
 		StudentList listFromSpecialty = null;
 		int number = 1;
+		System.out.println();
 		for (Faculty f: univer.getListFaculty()) {
 			System.out.println(f.getName());
 			for (Specialty s: f.getSpecialities()) {

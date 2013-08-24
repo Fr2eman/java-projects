@@ -44,6 +44,7 @@ public class EnrolleeDistribution {
 		}
 		distribute:
 		for(int i = 0; i < listEnrollee.size(); i++) {
+			distribute2:
 			for(int j = 0; listEnrollee.get(i).getState().getSpeciality().size() > j; j++) {
 				for(int k = 0; k < univer.getListFaculty().size(); k++) {
 					if(listEnrollee.get(i).getState().getSpeciality().get(j).getFaculty().equals(univer.getListFaculty().get(k))) {
@@ -51,8 +52,9 @@ public class EnrolleeDistribution {
 							if(listEnrollee.get(i).getState().getSpeciality().get(j).equals(univer.getListFaculty().get(k).getSpecialities().get(h))){
 								if(univer.getListFaculty().get(k).getSpecialities().get(h).getPlaceCount() != 0) {
 									lists.get(univer.getListFaculty().get(k).getSpecialities().get(h)).getList().add(listEnrollee.get(i));
+									univer.getListFaculty().get(k).getSpecialities().get(h).setPlaceCount(univer.getListFaculty().get(k).getSpecialities().get(h).getPlaceCount() - 1);
 									continue distribute;
-								}
+								} else continue distribute2;
 							}
 						}
 					}
