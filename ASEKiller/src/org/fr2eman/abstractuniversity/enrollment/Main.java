@@ -22,9 +22,7 @@ public class Main {
 		University univer = factoty.getUniversity(Universities.BSUIR);
 		
 		Map<Specialty, StudentList> lists = distribute.distribution(source, univer);
-		// 1. получить список абитуров
-		// 2. скормить список распределителю
-		// 3. получить список зачисленных
+
 		StudentList listFromSpecialty = null;
 		int number = 1;
 		System.out.println();

@@ -14,6 +14,11 @@ public class FixetEnrolleeSource implements EnrolleeSource {
 	int lang = 0;
 	int cert = 0;
 	int scor = 0;
+	
+	public FixetEnrolleeSource(int eCount) {
+		this.eCount = eCount;
+	}
+	
 	public Enrollee nextEnrollee() throws NoMoreEnrolleeException {
 		scor = 0;
 		boolean inQ = false;
@@ -35,8 +40,11 @@ public class FixetEnrolleeSource implements EnrolleeSource {
 			return enroll;
 		} else throw new NoMoreEnrolleeException();
 	}
-	public FixetEnrolleeSource(int eCount) {
-		this.eCount = eCount;
-	}
 	
+	@Override
+	public boolean hasNextEnrollee() {
+		if(i < eCount) {
+			return true;
+		} else return false;
+	}
 }

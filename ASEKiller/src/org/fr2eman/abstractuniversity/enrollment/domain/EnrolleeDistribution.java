@@ -13,7 +13,7 @@ public class EnrolleeDistribution {
 	public Map<Specialty, StudentList> distribution(EnrolleeSource source, University univer) {
 		List<Enrollee> list = new ArrayList<Enrollee>();
 		try {
-			for (int i = 1; i <= 1000; i++) {
+			while(source.hasNextEnrollee()) {
 				list.add(source.nextEnrollee());
 			}
 		} catch(NoMoreEnrolleeException e) {
