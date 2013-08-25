@@ -1,5 +1,6 @@
 package org.fr2eman.abstractuniversity.enrollment.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class University {
@@ -7,6 +8,11 @@ public class University {
 	private String name;
 	private String descrition;
 	private List<Faculty> listFaculty;
+	
+
+	public University(String name) {
+		this(name, new ArrayList<Faculty>());
+	}
 	
 	public University(String name, List<Faculty> listFaculty) {
 		super();
@@ -30,9 +36,5 @@ public class University {
 	}
 	public void setListFaculty(List<Faculty> listFaculty) {
 		this.listFaculty = listFaculty;
-	}
-	public University(String name) {
-		super();
-		this.name = name;
 	}
 }

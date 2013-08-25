@@ -11,19 +11,15 @@ import org.fr2eman.abstractuniversity.enrollment.domain.Specialty;
 import org.fr2eman.abstractuniversity.enrollment.domain.StudentList;
 import org.fr2eman.abstractuniversity.enrollment.domain.University;
 import org.fr2eman.abstractuniversity.enrollment.stream.EnrolleeSource;
-import org.fr2eman.abstractuniversity.enrollment.stream.NoMoreEnrolleeException;
 
 public class EnrolleeDistribution implements EnrolleeDistributionStrategy {
 	
 	public Map<Specialty, StudentList> distribution(EnrolleeSource source, University univer) {
 		List<Enrollee> list = new ArrayList<Enrollee>();
-		try {
-			while(source.hasNextEnrollee()) {
-				list.add(source.nextEnrollee());
-			}
-		} catch(NoMoreEnrolleeException e) {
-			e.printStackTrace();
+		while(source.hasNextEnrollee()) {
+			list.add(source.nextEnrollee());
 		}
+		
 		List<Enrollee> listEnrollee = new ArrayList<Enrollee>();
 		int maxScore = 0;
 		int index = 0;
@@ -41,6 +37,7 @@ public class EnrolleeDistribution implements EnrolleeDistributionStrategy {
 			itorator++;
 			maxScore = 0;
 		} 
+		
 		Map<Specialty, StudentList> lists = new HashMap<Specialty, StudentList>();
 		for (Faculty f : univer.getListFaculty()) {
 			for (Specialty s : f.getSpecialities()) {

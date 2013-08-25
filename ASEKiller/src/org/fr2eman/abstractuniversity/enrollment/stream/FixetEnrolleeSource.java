@@ -3,18 +3,21 @@ package org.fr2eman.abstractuniversity.enrollment.stream;
 import java.util.Random;
 
 import org.fr2eman.abstractuniversity.enrollment.domain.Enrollee;
+import org.fr2eman.abstractuniversity.enrollment.domain.University;
 
 public class FixetEnrolleeSource implements EnrolleeSource {
 	
 	private Random random = new Random();
 	private int eCount;
+	private University univer;
 	int i = 0;
 	
-	public FixetEnrolleeSource(int eCount) {
+	public FixetEnrolleeSource(int eCount, University univer) {
 		this.eCount = eCount;
+		this.univer = univer;
 	}
 	
-	public Enrollee nextEnrollee() throws NoMoreEnrolleeException {
+	public Enrollee nextEnrollee() {
 		int scor = 0;
 		boolean inQ = false;
 		if (i < eCount) {
@@ -29,8 +32,7 @@ public class FixetEnrolleeSource implements EnrolleeSource {
 			System.out.print("Enrollee " + scor + " : ");
 			
 			RandomFacultyAndSpecialty randomStatement = new RandomFacultyAndSpecialty();
-			Enrollee enroll = new Enrollee(scor, randomStatement.buildStatement(), inQ);
-			// TODO создание заявления
+			Enrollee enroll = new Enrollee(scor, randomStatement.buildStatement(univer), inQ);
 			
 			return enroll;
 		} else throw new NoMoreEnrolleeException();

@@ -1,6 +1,6 @@
 package org.fr2eman.abstractuniversity.enrollment.stream;
 
-public class NoMoreEnrolleeException extends Exception {
+public class NoMoreEnrolleeException extends RuntimeException {
 
 	/**
 	 * 

@@ -8,13 +8,10 @@ import org.fr2eman.abstractuniversity.enrollment.domain.Faculty;
 import org.fr2eman.abstractuniversity.enrollment.domain.Specialty;
 import org.fr2eman.abstractuniversity.enrollment.domain.Statement;
 import org.fr2eman.abstractuniversity.enrollment.domain.University;
-import org.fr2eman.abstractuniversity.enrollment.factory.UniversityFactoty;
-import org.fr2eman.abstractuniversity.enrollment.factory.UniversityFactoty.Universities;
 
 public class RandomFacultyAndSpecialty {
 	
 	Random random = new Random();
-	UniversityFactoty univerFacktory = new UniversityFactoty();
 	University univer = null;
 	Statement stat = null;
 	int fac = 0;
@@ -22,11 +19,11 @@ public class RandomFacultyAndSpecialty {
 	List<Faculty> listFacultys = null;
 	List<Specialty> listSpecialtys = null;
 	List<Specialty> randomSpecialtys = new ArrayList<Specialty>();
-	public Statement buildStatement() {
+	
+	public Statement buildStatement(University univer) {
 		int numbSpecialtys = random.nextInt(6);
 		numbSpecialtys++;
 		for (int i = 1; i <= numbSpecialtys; i++) {
-			univer = univerFacktory.getUniversity(Universities.BSUIR);
 			fac = random.nextInt((univer.getListFaculty().size()));
 			List<Faculty> listFacultys = new ArrayList<Faculty>(univer.getListFaculty());
 			spec = random.nextInt((listFacultys.get(fac).getSpecialities().size()));
