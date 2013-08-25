@@ -1,9 +1,13 @@
 package org.fr2eman.abstractuniversity.enrollment.distribution;
 
-import java.util.Set;
+import java.util.Map;
+
+import org.fr2eman.abstractuniversity.enrollment.domain.Specialty;
+import org.fr2eman.abstractuniversity.enrollment.domain.StudentList;
+import org.fr2eman.abstractuniversity.enrollment.domain.University;
+import org.fr2eman.abstractuniversity.enrollment.stream.EnrolleeSource;
 
 public interface EnrolleeDistributionStrategy {
 
-	public void nameMethod(Set s);
-	
+	Map<Specialty, StudentList> distribution(EnrolleeSource source, University univer);	
 }

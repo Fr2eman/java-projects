@@ -9,25 +9,20 @@ public class FixetEnrolleeSource implements EnrolleeSource {
 	private Random random = new Random();
 	private int eCount;
 	int i = 0;
-	int math = 0;
-	int phys = 0;
-	int lang = 0;
-	int cert = 0;
-	int scor = 0;
 	
 	public FixetEnrolleeSource(int eCount) {
 		this.eCount = eCount;
 	}
 	
 	public Enrollee nextEnrollee() throws NoMoreEnrolleeException {
-		scor = 0;
+		int scor = 0;
 		boolean inQ = false;
 		if (i < eCount) {
 			i++;
-			cert = random.nextInt(50) + 50;
-			phys = random.nextInt(85) + 15;
-			math = random.nextInt(85) + 15;
-			lang = random.nextInt(90) + 10;
+			int cert = random.nextInt(50) + 50;
+			int phys = random.nextInt(85) + 15;
+			int math = random.nextInt(85) + 15;
+			int lang = random.nextInt(90) + 10;
 			inQ = random.nextBoolean();
 			scor = cert + phys + math + lang;
 			System.out.println();

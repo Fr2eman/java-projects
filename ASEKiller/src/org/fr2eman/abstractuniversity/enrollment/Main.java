@@ -2,8 +2,8 @@ package org.fr2eman.abstractuniversity.enrollment;
 
 import java.util.Map;
 
+import org.fr2eman.abstractuniversity.enrollment.distribution.EnrolleeDistribution;
 import org.fr2eman.abstractuniversity.enrollment.domain.Enrollee;
-import org.fr2eman.abstractuniversity.enrollment.domain.EnrolleeDistribution;
 import org.fr2eman.abstractuniversity.enrollment.domain.Faculty;
 import org.fr2eman.abstractuniversity.enrollment.domain.Specialty;
 import org.fr2eman.abstractuniversity.enrollment.domain.StudentList;
